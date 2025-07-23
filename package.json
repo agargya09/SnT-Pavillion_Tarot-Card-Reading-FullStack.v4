@@ -1,0 +1,13 @@
+{
+  "name": "iitk-tarot-reader",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "live-server --open=./index.html",
+    "start": "serve -s ."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^15.0.2"
+  }
+}
