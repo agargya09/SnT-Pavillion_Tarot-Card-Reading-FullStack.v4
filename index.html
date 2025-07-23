@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITK Tarot Card Reader</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="card-back.jpg" />
+</head>
+<body>
+  <!-- Cosmic Background -->
+  <div class="cosmic-background">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="particles"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Welcome Stage -->
+    <section id="welcome-stage" class="stage active">
+      <div class="container">
+        <div class="welcome-content">
+          <div class="logo-section">
+            <div class="iitk-logo">
+              <div class="logo-ring"></div>
+              <div class="logo-text">IITK</div>
+            </div>
+            <h1 class="main-title">Tarot Card Reader</h1>
+            <p class="club-subtitle">Brain & Cognitive Science Club</p>
+          </div>
+
+          <div class="welcome-card">
+            <h2>Welcome to the Mystical Future Reader</h2>
+            <p class="intro-text">
+              Discover what the cosmic forces have in store for your IITK journey.  
+              Our mystical cards will reveal insights about your academic adventures,
+              social escapades, and the chaos that awaits you in the hallowed halls of IIT Kanpur!
+            </p>
+
+            <div class="form-section">
+              <div class="form-group">
+                <label class="form-label">Area of Interest</label>
+                <select id="areaSelect" class="form-control mystical-select">
+                  <option value="">Choose your destiny…</option>
+                  <option>Academics</option>
+                  <option>Social Life</option>
+                  <option>Romantic</option>
+                  <option>Extracurriculars</option>
+                  <option>Future Plans</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Gender</label>
+                <select id="genderSelect" class="form-control mystical-select">
+                  <option value="">Select…</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Non-binary</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+
+              <button id="startBtn" class="btn btn--primary mystical-btn large-btn" disabled>
+                <span class="btn-glow"></span>
+                Begin Mystical Reading
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Selection Stage -->
+    <section id="card-selection-stage" class="stage">
+      <div class="container">
+        <div class="stage-header">
+          <h2 class="stage-title">Choose Your Destiny</h2>
+          <p class="stage-subtitle">Select exactly 3 cards to unveil the secrets of your IITK future</p>
+
+          <div class="progress-indicator">
+            <div class="card-counter">
+              <span class="counter-text">Selected: <span id="selectedCount">0</span>/3</span>
+              <div class="counter-bar">
+                <div class="counter-fill" id="counterFill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cardGrid" class="tarot-grid"></div>
+
+        <div class="action-section">
+          <button id="revealBtn" class="btn btn--primary mystical-btn large-btn hidden">
+            <span class="btn-glow"></span>
+            Reveal My Fortune
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading Stage -->
+    <section id="loading-stage" class="stage">
+      <div class="container">
+        <div class="loading-content">
+          <div class="cosmic-spinner">
+            <div class="spinner-ring ring-1"></div>
+            <div class="spinner-ring ring-2"></div>
+            <div class="spinner-ring ring-3"></div>
+            <div class="spinner-core">
+              <div class="iitk-mini-logo">IITK</div>
+            </div>
+          </div>
+
+          <div class="loading-text-section">
+            <div id="loadingText" class="loading-text">The universe is aligning...</div>
+            <div class="loading-bar">
+              <div class="loading-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prediction Stage -->
+    <section id="prediction-stage" class="stage">
+      <div class="container">
+        <div class="results-header">
+          <h2 class="stage-title">Your Cosmic Reading</h2>
+          <p class="stage-subtitle">The cards have spoken - behold your IITK destiny!</p>
+
+          <div id="selectedCardsDisplay" class="selected-cards-display"></div>
+        </div>
+
+        <div class="prediction-section">
+          <div class="prediction-box">
+            <div id="fortuneBox" class="prediction-content">
+              <!-- Prediction will be inserted here -->
+            </div>
+          </div>
+        </div>
+
+        <div class="action-section">
+          <button id="againBtn" class="btn btn--secondary mystical-btn large-btn">
+            <span class="btn-glow"></span>
+            Read Again
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
